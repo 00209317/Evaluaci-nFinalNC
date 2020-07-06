@@ -5,14 +5,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-public class LoginController {
+public class CentroEscolarController {
 
-	@RequestMapping("/login")
+	@RequestMapping("/centroEscolar")
 	public ModelAndView login() {
 		ModelAndView mav = new ModelAndView();
-		mav.setViewName("login");
+		mav.setViewName("administrador/centroEscolar");
 		return mav;
 	}
-
-	
 }

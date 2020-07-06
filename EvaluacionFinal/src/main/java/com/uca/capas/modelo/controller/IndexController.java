@@ -10,7 +10,7 @@ public class IndexController {
 	@RequestMapping("/inicioAdmin")
 	public ModelAndView initAdmin() {
 		ModelAndView mav = new ModelAndView();
-		mav.setViewName("administrador/indexAdmin.html");
+		mav.setViewName("administrador/indexAdmin");
 		return mav;
 	}
 	
@@ -18,7 +18,7 @@ public class IndexController {
 	@RequestMapping("/inicioCoor")
 	public ModelAndView initCoor() {
 		ModelAndView mav = new ModelAndView();
-		mav.setViewName("coordinador/indexCoor.html");
+		mav.setViewName("coordinador/indexCoor");
 		return mav;
 	}
 }

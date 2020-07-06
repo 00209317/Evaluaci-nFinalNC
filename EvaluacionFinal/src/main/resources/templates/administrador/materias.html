@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Coordinador</title>
+  <title>materias</title>
 
   <!-- Custom fonts for this template-->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -32,7 +32,7 @@
         <div class="sidebar-brand-icon rotate-n-15">
           <i class="fas fa-laugh-wink"></i>
         </div>
-        <div class="sidebar-brand-text mx-3">Coordinador</div>
+        <div class="sidebar-brand-text mx-3">Administrador</div>
       </a>
 
       <!-- Divider -->
@@ -52,13 +52,14 @@
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
           <i class="fas fa-fw fa-folder"></i>
-          <span>Procesos</span>
+          <span>Catalogos</span>
         </a>
         <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Lista de Procesos:</h6>
-            <a class="collapse-item" href="login.html">Expediente de Alumnos</a>
-            <a class="collapse-item" href="register.html">Materias Cursadas</a>
+            <h6 class="collapse-header">Lista de Catalogos:</h6>            
+            <a class="collapse-item" href="inicioAdmin">Inicio</a>
+            <a class="collapse-item" href="centroEscolar">Centros Escolares</a>
+            <a class="collapse-item" href="usuarios">Usuarios del sistema</a>
           </div>
         </div>
       </li>
@@ -126,22 +127,65 @@
         <div class="container-fluid">
 
           <!-- Page Heading -->
-          <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
-          </div>
-
-          <!-- Content Row -->
-          <div class="row">
-
-
-          <!-- Content Row -->
-
-          <div class="row">
-
-
-
-             
-
+          <h1 class="h3 mb-2 text-gray-800">Tabla de Materias</h1>
+       
+          <!-- DataTales Example -->
+          <div class="card shadow mb-4">
+            <div class="card-header py-3">
+              <h6 class="m-0 font-weight-bold text-primary">Materias</h6>
+            </div>
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                  <thead>
+                    <tr>
+                      <th>Acción</th>
+                      <th>Código</th>
+                      <th>Descripción</th>
+                      <th>Estado</th>
+                      
+                    </tr>
+                  </thead>
+                  <!-- <tfoot>
+                    <tr>
+                      <th>Name</th>
+                      <th>Position</th>
+                      <th>Office</th>
+                      <th>Age</th>
+                      <th>Start date</th>
+                      <th>Salary</th>
+                    </tr>
+                  </tfoot> -->
+                  <tbody>
+                    <tr>
+                      <td><center><a href="#" class="btn btn-info btn-circle">
+                    	<i class="fas fa-pencil-alt"></i>
+                  		</a></center></td>
+                      <td>System Architect</td>
+                      <td>Edinburgh</td>
+                      <td>61</td>                      
+                    </tr>
+                    <tr>
+                      <td>Garrett Winters</td>
+                      <td>Accountant</td>
+                      <td>Tokyo</td>
+                      <td>63</td>
+                    </tr>
+                    <tr>
+                      <td>Ashton Cox</td>
+                      <td>Junior Technical Author</td>
+                      <td>San Francisco</td>
+                      <td>66</td>
+                    </tr>
+                    <tr>
+                      <td>Cedric Kelly</td>
+                      <td>Senior Javascript Developer</td>
+                      <td>Edinburgh</td>
+                      <td>22</td>
+                    </tr>                 
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
 
@@ -150,7 +194,6 @@
 
       </div>
       <!-- End of Main Content -->
-
       <!-- Footer -->
       <footer class="sticky-footer bg-white">
         <div class="container my-auto">
