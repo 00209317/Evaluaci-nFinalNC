@@ -164,7 +164,13 @@
                   <tbody>
                    <th:block th:each="CentroEscolar, row:${ces}">
                 	<tr th:each="v : ${CentroEscolar}">
-                		<td>></td>                	
+                		<td>
+                			<div class="form-group">
+								<form method="get" th:action="@{/materias}"> 
+							  		<input type="submit" value="Editar" class="btn btn-success btn-lg btn-block">
+				  				</form>
+	  						</div>
+                		</td>                	
                 		<td th:text="${v.c_centroescolar}"></td>
                 		<td th:text="${v.nombrece}"></td>
                 		<td th:text="${v.descripcionce}"></td>

@@ -6,16 +6,16 @@
 </head>
 <body>
 <div class="signup-form">
-	<h1>Ingresar nuevo libro</h1>
-		    <form th:action="@{/ingresar}" th:object="${CentroEscolar}" method="POST">
+	<h1>Ingresar nuevo Centro Escolar</h1>
+		    <form th:action="@{/ingresarCentroEscolar}" th:object="${CentroEscolar}" method="POST">
 			<div class="form-group">
-			<label>Titulo</label>
+			<label>Nombre</label>
 			<input type="text" th:field="*{nombrece}"><br>
 		  	<span th:errors="*{nombrece}" style="color: #FF0000"></span><br>
 		  	</div>
 		  	
 		  	<div class="form-group">
-			<label>Autor</label>
+			<label>Descripcion</label>
 			<input type="text" th:field="*{descripcionce}"><br>
 		  	<span th:errors="*{descripcionce}" style="color: #FF0000"></span><br>
 		  	</div>

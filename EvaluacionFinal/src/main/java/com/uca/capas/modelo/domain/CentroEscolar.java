@@ -7,6 +7,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
+import javax.validation.constraints.NotEmpty;
 
 @Entity
 @Table(schema = "public", name = "centroescolar")
@@ -14,14 +15,16 @@ public class CentroEscolar {
 	
 	
 	@Id
-	@GeneratedValue(generator="cliente_c_cliente_seq", strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "c_centroescolar")
 	private int c_centroescolar;
 	
 	@Column(name = "nombrece")
+	@NotEmpty(message="El campo titulo categoría no puede estar vacío")
 	private String nombrece;
 	
 	@Column(name = "descripcionce")
+	@NotEmpty(message="El campo titulo categoría no puede estar vacío")
 	private String descripcionce;
 	
 	@Column(name = "estadoce")

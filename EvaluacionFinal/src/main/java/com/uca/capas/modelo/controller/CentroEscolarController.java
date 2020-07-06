@@ -2,10 +2,14 @@ package com.uca.capas.modelo.controller;
 
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.domain.Sort.Direction;
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
@@ -50,6 +54,27 @@ public class CentroEscolarController {
 		CentroEscolar ce = new CentroEscolar();
 		mav.addObject("CentroEscolar", ce);
 		mav.setViewName("administrador/nuevoCE");
+		return mav;
+	}
+	
+	@RequestMapping("/ingresarCentroEscolar")
+	public ModelAndView categoria(@Valid @ModelAttribute CentroEscolar centroEscolar, BindingResult result) {
+		ModelAndView mav = new ModelAndView();
+		if(result.hasErrors()) {
+			//regresar con los errores
+			mav.setViewName("administrador/nuevoCE");
+		}else {
+			centroEscolardao.insert(centroEscolar);
+			List<CentroEscolar> ces = centroEscolardao.findAll();
+			try {
+				mav.addObject("ces", ces);
+			}
+			catch(Exception e){
+				e.printStackTrace();
+			}
+			//mav.addObject("exito","Categoria guardada con exito");
+			mav.setViewName("administrador/centroEscolar");
+		}
 		return mav;
 	}
 	
