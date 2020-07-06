@@ -43,5 +43,15 @@ public class CentroEscolarController {
 		mav.setViewName("administrador/centroEscolar");
 		return mav;
 	}
+	
+	@RequestMapping("/centroescolar")
+	public ModelAndView centroEscolar() {
+		ModelAndView mav = new ModelAndView();
+		CentroEscolar ce = new CentroEscolar();
+		mav.addObject("CentroEscolar", ce);
+		mav.setViewName("administrador/nuevoCE");
+		return mav;
+	}
+	
 
 }

@@ -11,4 +11,6 @@ import com.uca.capas.modelo.domain.CentroEscolar;
 public interface CentroEscolarDAO {
 	
 	public List<CentroEscolar> findAll() throws DataAccessException;
+	
+	public void insert(CentroEscolar centroEscolar) throws DataAccessException;
 }

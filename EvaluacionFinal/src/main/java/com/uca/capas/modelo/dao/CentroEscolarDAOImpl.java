@@ -8,6 +8,7 @@ import javax.persistence.PersistenceContext;
 import org.springframework.dao.DataAccessException;
 import javax.persistence.Query;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.uca.capas.modelo.domain.CentroEscolar;
 
@@ -25,6 +26,12 @@ public class CentroEscolarDAOImpl implements CentroEscolarDAO{
 		Query query = entityManager.createNativeQuery(sb.toString(),CentroEscolar.class);
 		List<CentroEscolar> resulset = query.getResultList();
 		return resulset;
+		
+	}
+
+	@Transactional
+	public void insert(CentroEscolar centroEscolar) throws DataAccessException {
+		entityManager.persist(centroEscolar);
 		
 	}
 

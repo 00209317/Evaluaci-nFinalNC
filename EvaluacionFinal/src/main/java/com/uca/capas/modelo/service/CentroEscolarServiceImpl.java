@@ -29,5 +29,11 @@ public class CentroEscolarServiceImpl implements CentroEscolarService{
 		return centroEscolarRepository.findAllClientes();
 	}
 
+	@Override
+	public void insert(CentroEscolar centroEscolar) throws DataAccessException {
+		
+		
+	}
+
 
 }

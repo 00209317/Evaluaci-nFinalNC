@@ -128,7 +128,11 @@
 
           <!-- Page Heading -->
           <h1 class="h3 mb-2 text-gray-800">Tabla de Centros Escolares</h1>
-    
+	           <div class="form-group">
+				  <form method="get" th:action="@{/centroescolar}"> 
+				  <input type="submit" value="Ingresar CentroEscolar" class="btn btn-success btn-lg btn-block">
+				  </form>
+	  			</div>
           <!-- DataTales Example -->
           <div class="card shadow mb-4">
             <div class="card-header py-3">
@@ -141,6 +145,7 @@
                     <tr>
                       <th>Acción</th>
                       <th>Código</th>
+                      <th>Nombre</th>
                       <th>Descripción</th>
                       <th>Estado</th>
                       
@@ -159,7 +164,7 @@
                   <tbody>
                    <th:block th:each="CentroEscolar, row:${ces}">
                 	<tr th:each="v : ${CentroEscolar}">
-                		<td><p>Hola</p></td>                	
+                		<td>></td>                	
                 		<td th:text="${v.c_centroescolar}"></td>
                 		<td th:text="${v.nombrece}"></td>
                 		<td th:text="${v.descripcionce}"></td>

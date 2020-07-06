@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<div class="signup-form">
+	<h1>Ingresar nuevo libro</h1>
+		    <form th:action="@{/ingresar}" th:object="${CentroEscolar}" method="POST">
+			<div class="form-group">
+			<label>Titulo</label>
+			<input type="text" th:field="*{nombrece}"><br>
+		  	<span th:errors="*{nombrece}" style="color: #FF0000"></span><br>
+		  	</div>
+		  	
+		  	<div class="form-group">
+			<label>Autor</label>
+			<input type="text" th:field="*{descripcionce}"><br>
+		  	<span th:errors="*{descripcionce}" style="color: #FF0000"></span><br>
+		  	</div>
+		  	
+		  	<div class="form-group">
+			<label>Activo</label>
+			<input type="radio" th:field="*{estadoce}" th:value="${true}"><br>
+			<label>Inactivo</label>
+			<input type="radio" th:field="*{estadoce}" th:value="${false}"><br>
+			</div>
+			
+			<div class="form-group">
+				<input type="submit" value="Guardar" class="btn btn-success btn-lg btn-block">
+			</div>
+		  </form>
+			
+	</div>
+</body>
+</html>
