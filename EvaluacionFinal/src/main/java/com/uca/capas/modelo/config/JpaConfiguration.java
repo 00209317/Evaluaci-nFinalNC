@@ -25,7 +25,7 @@ public class JpaConfiguration {
 	public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
 		LocalContainerEntityManagerFactoryBean em = new LocalContainerEntityManagerFactoryBean();
 		em.setDataSource(dataSource());
-		em.setPersistenceUnitName("modelo-persistence");
+		em.setPersistenceUnitName("capas");
 		em.setPackagesToScan("com.uca.capas.modelo.domain");
 		
 		JpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
@@ -58,7 +58,7 @@ public class JpaConfiguration {
 		 * En este caso el servidor postgres se encuentra en la misma maquina (localhost)
 		 * Cambiar a la IP correspondiente si en su caso no fuera asi
 		 */
-		dataSource.setUrl("jdbc:postgresql://localhost:5432/VENTAS_NG");
+		dataSource.setUrl("jdbc:postgresql://localhost:5432/BECA_ESTUDIANTE");
 		dataSource.setUsername("cortezle");
 		dataSource.setPassword("admin");
 		/*dataSource.setUsername("postgres");

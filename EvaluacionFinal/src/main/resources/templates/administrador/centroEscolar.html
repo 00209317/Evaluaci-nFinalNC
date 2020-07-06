@@ -157,32 +157,15 @@
                     </tr>
                   </tfoot> -->
                   <tbody>
-                    <tr>
-                      <td><center><a href="#" class="btn btn-info btn-circle">
-                    	<i class="fas fa-pencil-alt"></i>
-                  		</a></center></td>
-                      <td>System Architect</td>
-                      <td>Edinburgh</td>
-                      <td>61</td>                      
-                    </tr>
-                    <tr>
-                      <td>Garrett Winters</td>
-                      <td>Accountant</td>
-                      <td>Tokyo</td>
-                      <td>63</td>
-                    </tr>
-                    <tr>
-                      <td>Ashton Cox</td>
-                      <td>Junior Technical Author</td>
-                      <td>San Francisco</td>
-                      <td>66</td>
-                    </tr>
-                    <tr>
-                      <td>Cedric Kelly</td>
-                      <td>Senior Javascript Developer</td>
-                      <td>Edinburgh</td>
-                      <td>22</td>
-                    </tr>                 
+                   <th:block th:each="CentroEscolar, row:${ces}">
+                	<tr th:each="v : ${CentroEscolar}">
+                		<td><p>Hola</p></td>                	
+                		<td th:text="${v.c_centroescolar}"></td>
+                		<td th:text="${v.nombrece}"></td>
+                		<td th:text="${v.descripcionce}"></td>
+                		<td th:text="${v.estadoce}"></td>
+                	</tr>
+                	</th:block>            
                   </tbody>
                 </table>
               </div>
