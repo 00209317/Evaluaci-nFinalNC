@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+<title>Listado</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"> 
+</head>
+<body>
+<div class="signup-form">
+<table class="table">
+		<thead class="thead-dark">
+			<th>ID</th>
+			<th>Nombre</th>
+		</thead>
+               <tbody>
+                	<th:block th:each="Municipio, row:${muns}">
+                	<tr th:each="v : ${Municipio}">
+                		<td th:text="${v.c_municipio}"></td>                	
+                		<td th:text="${v.nombre_municipio}"></td>
+                	</tr>
+                	</th:block>
+                </tbody>
+	</table>
+	<div class="form-group">
+	<form method="get" th:action="@{/index}"> 
+  <input type="submit" value="Regresar" class="btn btn-success btn-lg btn-block">
+  </div>
+  </form>
+  </div>
+</body>
+</html>
