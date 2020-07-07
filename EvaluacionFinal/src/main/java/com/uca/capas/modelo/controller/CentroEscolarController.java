@@ -91,7 +91,7 @@ public class CentroEscolarController {
 		mav.addObject("CentroEscolar",new CentroEscolar());
 		if(r.hasErrors()) {
 			System.out.println("estoy en error");
-			mav.setViewName("Laboratorio/agregarCliente");
+			mav.setViewName("administrador/nuevoCE");
 		}else {
 			if(c.getC_centroescolar()==null) {
 				System.out.println("estoy en insert");
@@ -118,7 +118,7 @@ public class CentroEscolarController {
 		ModelAndView mav = new ModelAndView();
 		CentroEscolar c =centroEscolarService.findOne(codigo);
 		mav.addObject("CentroEscolar", c);
-		mav.setViewName("administrador/editarCE");
+		mav.setViewName("administrador/nuevoCE");
 		return mav;
 	}
 	
