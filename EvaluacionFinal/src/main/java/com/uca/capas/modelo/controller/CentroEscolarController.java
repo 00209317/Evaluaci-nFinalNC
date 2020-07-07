@@ -31,16 +31,7 @@ public class CentroEscolarController {
 	@Autowired
 	private CentroEscolarService centroEscolarService;
 	
-
 	@RequestMapping("/centroEscolar")
-	public ModelAndView login() {
-		ModelAndView mav = new ModelAndView();
-		mav.setViewName("administrador/centroEscolar");
-		return mav;
-	}
-	
-	
-	@RequestMapping("/listado")
 	public ModelAndView listado() {
 		ModelAndView mav = new ModelAndView();
 		List<CentroEscolar> ces = centroEscolardao.findAll();

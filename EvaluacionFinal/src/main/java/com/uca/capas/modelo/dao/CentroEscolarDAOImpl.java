@@ -28,7 +28,7 @@ public class CentroEscolarDAOImpl implements CentroEscolarDAO{
 	public List<CentroEscolar>findAll() throws DataAccessException{
 		//TODO Auto-generated method stub
 		StringBuffer sb = new StringBuffer();
-		sb.append("select * from public.centroescolar;");
+		sb.append("select * from public.centroescolar ORDER BY c_centroescolar asc;");
 		Query query = entityManager.createNativeQuery(sb.toString(),CentroEscolar.class);
 		List<CentroEscolar> resulset = query.getResultList();
 		return resulset;

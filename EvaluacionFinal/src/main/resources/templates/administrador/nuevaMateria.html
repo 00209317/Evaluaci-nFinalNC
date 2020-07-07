@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<div class="signup-form">
+	<h1>Ingresar nueva Materia</h1>
+		    <form th:action="@{/ingresarMateria}" th:object="${Materia}" method="POST">
+		    
+		    <input type="hidden" name="c_materia" class="form-control" th:field="*{c_materia}" />
+		    
+			<div class="form-group">
+			<label>Nombre</label>
+			<input type="text" th:field="*{nombre_materia}"><br>
+		  	<span th:errors="*{Nombre_materia}" style="color: #FF0000"></span><br>
+		  	</div>
+		  	
+		  	<div class="form-group">
+			<label>Descripcion</label>
+			<input type="text" th:field="*{descripcion_materia}"><br>
+		  	<span th:errors="*{Descripcion_materia}" style="color: #FF0000"></span><br>
+		  	</div>
+		  	
+		  	<div class="form-group">
+			<label>Activo</label>
+			<input type="radio" th:field="*{estado}" th:value="${true}"><br>
+			<label>Inactivo</label>
+			<input type="radio" th:field="*{estado}" th:value="${false}"><br>
+			</div>
+			
+			<div class="form-group">
+				<input type="submit" value="Guardar" class="btn btn-success btn-lg btn-block">
+			</div>
+		  </form>
+			
+	</div>
+</body>
+</html>
