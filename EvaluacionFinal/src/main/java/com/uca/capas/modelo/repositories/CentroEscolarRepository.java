@@ -11,5 +11,9 @@ import com.uca.capas.modelo.domain.CentroEscolar;
 public interface CentroEscolarRepository extends JpaRepository<CentroEscolar, Integer> {
 	@Query(value = "SELECT * from public.centroescolar", nativeQuery = true)
     public List<CentroEscolar> findAllClientes();
-
+	
+	
+	@Query(value = "SELECT * from public.centroescolar where c_centroescolar=?", nativeQuery = true)
+    public CentroEscolar findOne(int id);
+	
 }

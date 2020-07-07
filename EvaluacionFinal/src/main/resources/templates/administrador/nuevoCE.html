@@ -8,6 +8,7 @@
 <div class="signup-form">
 	<h1>Ingresar nuevo Centro Escolar</h1>
 		    <form th:action="@{/ingresarCentroEscolar}" th:object="${CentroEscolar}" method="POST">
+		    <input type="hidden" name="ccentroescolar" class="form-control" th:field="*{c_centroescolar}" />
 			<div class="form-group">
 			<label>Nombre</label>
 			<input type="text" th:field="*{nombrece}"><br>

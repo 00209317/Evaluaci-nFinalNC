@@ -17,7 +17,7 @@ public class CentroEscolar {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "c_centroescolar")
-	private int c_centroescolar;
+	private Integer c_centroescolar;
 	
 	@Column(name = "nombrece")
 	@NotEmpty(message="El campo titulo categoría no puede estar vacío")
@@ -30,10 +30,10 @@ public class CentroEscolar {
 	@Column(name = "estadoce")
 	private Boolean estadoce;
 	
-	public int getC_centroescolar() {
+	public Integer getC_centroescolar() {
 		return c_centroescolar;
 	}
-	public void setC_centroescolar(int c_centroescolar) {
+	public void setC_centroescolar(Integer c_centroescolar) {
 		this.c_centroescolar = c_centroescolar;
 	}
 	public String getNombrece() {

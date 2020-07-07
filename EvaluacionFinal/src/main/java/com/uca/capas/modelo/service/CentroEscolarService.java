@@ -15,5 +15,7 @@ public interface CentroEscolarService {
 	public List<CentroEscolar> findAll() throws DataAccessException;
 	public List<CentroEscolar> findAllClientes();
 	public void insert(CentroEscolar centroEscolar) throws DataAccessException;
+	public CentroEscolar findOne(Integer codigo) throws DataAccessException;
+	public void updateCliente(CentroEscolar c);
 
 }
